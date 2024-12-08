@@ -32,5 +32,104 @@ N/B Not all columns were converted to integers for visualization purposes. The c
 The resulting data frame contained 61459 rows and 16 columns. The data frame still contained object datatype and while
 some columns were transformed.
 
+<h3>modelling and evaluation</h3>
+
+<h3>Building a Logistic regression model</h3>
+
+![image](https://github.com/user-attachments/assets/f12de9da-bc9c-4dc1-b2cd-25252f67563a)
+
+                precision   recall  f1-score   support
+
+           0       0.97      0.71      0.82     13637
+           
+           1       0.26      0.83      0.40      1728
+
+    accuracy                           0.72     15365
+    
+   macro avg       0.62      0.77      0.61     15365
+   
+weighted avg       0.89      0.72      0.77     15365
+
+The model achieves an accuracy of  72%. The model performs poorly in predicting the minority class and a macro average f1 score of 61%. A decision tree classifier model is recommended to improve the prediction.
+
+<h3>Building  a decision tree model(no hyperparameter tuning)</h3>
+
+                 precision    recall  f1-score   support
+
+           0       0.94      0.93      0.94     13637
+           
+           1       0.50      0.54      0.52      1728
+           
+
+    accuracy                           0.89     15365
+    
+   macro avg       0.72      0.73      0.73     15365
+   
+weighted avg       0.89      0.89      0.89     15365
+
+![image](https://github.com/user-attachments/assets/b17103b5-719b-40d4-9681-e84b233b6701)
+
+The Area Under the Curve (AUC) value is 0.74, indicating that the model has moderate performance
+
+<h3>Hypertuning the parameters to solve the problem of overfitting</h3>
+
+![image](https://github.com/user-attachments/assets/80614ea7-0323-4797-89ed-1655362ae383)
+
+
+   precision    recall  f1-score   support
+
+           0       0.95      0.92      0.93     13637
+           
+           1       0.49      0.61      0.54      1728
+
+    accuracy                           0.88     15365
+    
+   macro avg       0.72      0.77      0.74     15365
+   
+weighted avg       0.90      0.88      0.89     15365
+
+![image](https://github.com/user-attachments/assets/e941dc91-c6b6-481f-8f18-526cbdf8cb38)
+
+Hyper tuning slightly improved the f1 score thus prioritizing the minority class.The accuracy however decreased slightly from 89 to 88 precision has slightly improved from 89 to 90%
+
+The model demonstrates moderate performance and can be improved further.A random forest classifier can improve the performance of the model.
+
+<h3>Building a random forest classifier</h3>
+
+![image](https://github.com/user-attachments/assets/72b885e8-0897-422c-ad62-c6ab96224d7b)
+
+
+              precision    recall  f1-score   support
+
+           0       0.96      0.91      0.94     13637
+           
+           1       0.50      0.71      0.59      1728
+
+    accuracy                           0.89     15365
+    
+   macro avg       0.73      0.81      0.76     15365
+
+   
+weighted avg       0.91      0.89      0.90     15365
+
+![image](https://github.com/user-attachments/assets/5c4d2ae7-2dc5-428f-9bfb-815d26a6fba6)
+
+The curve is close to the top-left corner, showing a high TPR and a low FPR, which signifies a good balance.AUC of 0.93 indicates a strong predictive power of the model.
+
+<h3>Conclusion</h3>
+
+The random forest model performs the best in terms of f1 score .It has the AUC score at 93% indicating a strong predictive power of the model.The objective of the analysis was achieved ie the random forest predicted the arrest flag at an accuracy of 89% and an f1 score above 75%.
+
+
+<h3>Recommendation</h3>
+
+Despite achieving the desired accuracy,the best model ie random forest classifier performed poorly in terms of the f1 score.For predicting if a terry stop would lead to an arrest or not the f1 score is the best metric to be considered.XGboost model can be modeled and performance evaluated.
+
+
+
+
+
+
+
 
 
