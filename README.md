@@ -118,7 +118,7 @@ The curve is close to the top-left corner, showing a high TPR and a low FPR, whi
 
 <h3>Conclusion</h3>
 
-The random forest model performs the best in terms of f1 score .It has the AUC score at 93% indicating a strong predictive power of the model.The objective of the analysis was achieved ie the random forest predicted the arrest flag at an accuracy of 89% and an f1 score above 75%.
+The random forest model performs the best in terms of f1 score .It has the AUC score at 93% indicating a strong predictive power of the model.The objective of the analysis was achieved ie the random forest predicted the arrest flag at an accuracy of 89% and an f1 score above 75%.For the project report see the link https://docs.google.com/document/d/1RTaTkGl-14oF1HpLtZthyKrAoVpfsFss6SbpQ4RvicM/edit?tab=t.0#heading=h.u82esget8blb 
 
 
 <h3>Recommendation</h3>
